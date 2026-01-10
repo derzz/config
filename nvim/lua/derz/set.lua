@@ -1,5 +1,6 @@
 vim.cmd.colorscheme("tokyonight")
 
+
 vim.opt.clipboard = 'unnamedplus' -- use system keyboard for yank
 vim.opt.nu = true                 -- set line numbers -- set line numbers
 vim.opt.relativenumber = true     -- use relative line numbers
@@ -32,3 +33,11 @@ require("conform").setup({
     typescriptreact = { "prettierd", "prettier", stop_after_first = true },
   },
 })
+
+-- Diagnostics
+vim.diagnostic.config({
+  update_in_insert = true,
+  virtual_text=true
+})
+
+

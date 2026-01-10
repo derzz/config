@@ -3,6 +3,9 @@ vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
 vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move to window below" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move to window above" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
+for _, key in ipairs({ '<Esc>', '<C-[>' }) do
+  vim.keymap.set('t', key, '<C-\\><C-n>')
+end
 vim.keymap.set({ "n", "x" }, "=", function()
   require("conform").format({
     async = true,
