@@ -10,6 +10,5 @@ return {
     },
   },
   keys = {
-    { "<leader>s", "<cmd>ASToggle<CR>", desc = "Toggle autosave" },
   },
 }

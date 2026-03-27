@@ -1,7 +1,12 @@
 return {
   "folke/trouble.nvim",
-  opts = {}, -- for default options, refer to the configuration section for custom setup.
   cmd = "Trouble",
-  keys = {
+  opts = {
+    -- This ensures we see the line numbers clearly in the list
+    modes = {
+      diagnostics = {
+        format = "{severity_icon} {message} {pos} {source}", 
+      },
+    },
   },
 }

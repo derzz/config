@@ -36,8 +36,12 @@ function _lazygit_toggle()
       -- No need for an on_close, we control it with the toggle function
     })
   end
-  
   -- Toggle the terminal
   lazygit:toggle()
 end
 
+-- Start the Quartz server in the background
+vim.keymap.set("n", "<leader>ms", "<cmd>OverseerRun quartzServe<cr>", { desc = "Quartz Serve" })
+
+-- Toggle the task list (to see build logs or stop the server)
+vim.keymap.set("n", "<leader>mt", "<cmd>OverseerToggle<cr>", { desc = "Quartz Tasks/Logs" })

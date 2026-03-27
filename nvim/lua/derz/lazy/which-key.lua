@@ -53,6 +53,7 @@ return {
       { "<leader>bh", "<cmd>BufferLineCloseLeft<cr>",                                               desc = "Close all left" },
       { "<leader>bj", "<cmd>BufferLinePick<cr>",                                                    desc = "Jump" },
       { "<leader>bl", "<cmd>BufferLineCloseRight<cr>",                                              desc = "Close all right" },
+      { "<leader>bb", "<cmd>BufferLineCyclePrev<cr>",                                               desc = "Back" },
       { "<leader>bn", "<cmd>BufferLineCycleNext<cr>",                                               desc = "Next" },
       { "<leader>bc",  "<cmd>bd<CR>",                                                                desc = "Close Buffer" },
 

@@ -1,7 +1,3 @@
-
-# Place a copy of this config to ~/.aerospace.toml
-# After that, you can edit ~/.aerospace.toml to your liking
-
 # Config version for compatibility and deprecations
 # Fallback value (if you omit the key): config-version = 1
 config-version = 2
@@ -11,7 +7,7 @@ config-version = 2
 after-startup-command = []
 
 # Start AeroSpace at login
-start-at-login = false
+start-at-login = true 
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -46,7 +42,7 @@ automatically-unhide-macos-hidden-apps = false
 # even when they are invisible.
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "Spotify", "Games"]
+persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "G̲ames", "M̲usic"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -137,8 +133,8 @@ on-mode-changed = []
     alt-7 = 'workspace 7'
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
-    alt-g = 'workspace Games'
-    alt-s = 'workspace Spotify'
+    alt-g = 'workspace G̲ames'
+    alt-m = 'workspace M̲usic'
     
     alt-shift-enter = 'fullscreen'
     alt-space = 'exec-and-forget open -na Ghostty'
@@ -155,18 +151,19 @@ on-mode-changed = []
     alt-shift-9 = 'move-node-to-workspace 9'
 
     # workspace for games
-    alt-shift-g = 'move-node-to-workspace Games'
+    alt-shift-g = 'move-node-to-workspace G̲ames'
 
-    # workspace for spotify
-    alt-shift-s = 'move-node-to-workspace Spotify'
+    # workspace for music
+    alt-shift-m = 'move-node-to-workspace M̲usic'
+
+    alt-i = 'workspace prev'
+
+    alt-o = 'workspace next'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
-
-    # See: https://nikitabobko.github.io/AeroSpace/commands#mode
-    alt-shift-semicolon = 'mode service'
 
     [workspace-to-monitor-force-assignment]
 
@@ -204,3 +201,7 @@ on-mode-changed = []
     alt-shift-j = ['join-with down', 'mode main']
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Music'
+run = 'move-node-to-workspace M̲usic'
