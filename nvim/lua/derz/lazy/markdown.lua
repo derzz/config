@@ -13,12 +13,17 @@ return {
           path = "~/quartz/content",
         },
       },
-
       completion = {
         nvim_cmp = true,
         min_chars = 2,
       },
-      
+      frontmatter = {
+        func = function(note)
+          -- This returns the fields you want in the header
+          return { id = note.id, aliases = note.aliases, tags = note.tags, title = note.title, date = os.date("%Y-%m-%d") }
+        end,
+      },
+
       strict = true,
       detect_workspace = "none",
       -- Link customization for Quartz compatibility

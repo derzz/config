@@ -16,7 +16,7 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 30
+accordion-padding = 20
 
 # Possible values: tiles|accordion
 default-root-container-layout = 'tiles'
@@ -42,7 +42,7 @@ automatically-unhide-macos-hidden-apps = false
 # even when they are invisible.
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "G̲ames", "M̲usic"]
+persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "G̲ames", "M̲usic"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -157,32 +157,22 @@ on-mode-changed = []
     alt-shift-m = 'move-node-to-workspace M̲usic'
 
     alt-i = 'workspace prev'
-
     alt-o = 'workspace next'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
-    alt-tab = 'workspace-back-and-forth'
+    alt-p = 'workspace-back-and-forth'
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-    alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+    alt-shift-p = 'move-workspace-to-monitor --wrap-around next'
 
     [workspace-to-monitor-force-assignment]
-
     1 = 'main'
-
     2 = 'main'
-
     3 = 'main'
-
     4 = 'main'
-
     5 = 'main'
-
     6 = ['secondary', 'main']
-
     7 = ['secondary', 'main']
-
     8 = ['secondary', 'main']
-
     9 = ['secondary', 'main']
 
 
